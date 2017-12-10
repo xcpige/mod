@@ -3,10 +3,10 @@
 //  ss-panel v3 配置
 //
 // !!! 修改此key为随机字符串确保网站安全 !!!
-$System_Config['key'] = 'randomkey';
+$System_Config['key'] = 'randomkeypass';
 $System_Config['debug'] =  'false';  //  正式环境请确保为false
-$System_Config['appName'] = '91vps';             //站点名称
-$System_Config['baseUrl'] = 'https://91vps.win';            // 站点地址
+$System_Config['appName'] = 'C7TX';             //站点名称
+$System_Config['baseUrl'] = 'http://go.c7tx.com';            // 站点地址
 $System_Config['timeZone'] = 'PRC';        // PRC 天朝时间  UTC 格林时间
 $System_Config['pwdMethod'] = 'sha256';       // 密码加密   可选 md5,sha256
 $System_Config['salt'] = '';               // 密码加密用，从旧版升级请留空
@@ -19,7 +19,7 @@ $System_Config['tokenDriver'] = 'db';
 //$System_Config['version'] = '<a href="https://www.zhaoj.in">Glzjin</a> mod-2016042210000';
 
 // mu key 用于校验ss-go mu的请求,半角逗号分隔
-$System_Config['muKey'] = 'mupass';
+$System_Config['muKey'] = 'ssrgopass';
 // 邮件
 $System_Config['mailDriver'] = 'mailgun';   // mailgun or smtp or sendgrid
 
@@ -27,7 +27,7 @@ $System_Config['mailDriver'] = 'mailgun';   // mailgun or smtp or sendgrid
 $System_Config['user_class_expire_default']='2';
 
 #用户注册等级，在注册时设置。
-$System_Config['user_class_default']='9';
+$System_Config['user_class_default']='0';
 
 #用户注册客户端数量限制，0为不限制
 $System_Config['user_conn']='2';
@@ -38,19 +38,19 @@ $System_Config['user_speedlimit']='2';
 
 
 #邀请新用户获得流量奖励，单位G
-$System_Config['invite_gift']='2';
+$System_Config['invite_gift']='0.1';
 
 #新用户通过私人邀请链接注册，获得奖励金额（鼓励消费）
-$System_Config['invite_get_money']='10';
+$System_Config['invite_get_money']='0';
 
 // 用户签到设置
-$System_Config['checkinMin'] = '100';       // 签到最少流量 单位MB
-$System_Config['checkinMax'] = '200';       // 签到最多流量
+$System_Config['checkinMin'] = '10';       // 签到最少流量 单位MB
+$System_Config['checkinMax'] = '50';       // 签到最多流量
 
-$System_Config['defaultTraffic'] = '10';      // 用户初始流量 单位GB
+$System_Config['defaultTraffic'] = '0.1';      // 用户初始流量 单位GB
 
 // 注册后获得的邀请码数量
-$System_Config['inviteNum'] = '5';
+$System_Config['inviteNum'] = '0';
 
 # database 数据库配置
 $System_Config['db_driver'] = 'mysql';
@@ -134,7 +134,7 @@ $System_Config['pacp_offset']='-20000';
 $System_Config['pacpp_offset']='-20000';
 
 #测速周期/h
-$System_Config['Speedtest_duration']='6';
+$System_Config['Speedtest_duration']='2';
 
 
 #随机分组，注册时随机分配到的分组，多个分组请用英文半角逗号分隔。
@@ -165,7 +165,7 @@ $System_Config['code_payback']='20';
 
 #注册时的流量重置日以及需要重置的流量,0不重置
 $System_Config['reg_auto_reset_day']='0';
-$System_Config['reg_auto_reset_bandwidth']='100';
+$System_Config['reg_auto_reset_bandwidth']='0.1';
 
 #Cloudxns
 $System_Config['cloudxns_apikey']='';#自己去 cloudxns.net 申请
@@ -212,7 +212,7 @@ $System_Config['reg_protocol_param']='';
 $System_Config['reg_obfs']='http_simple';
 
 #注册时默认混淆参数
-$System_Config['reg_obfs_param']='jd.hk';
+$System_Config['reg_obfs_param']='c7tx.com';
 
 #注册时默认禁止访问IP列表，半角英文逗号分割
 $System_Config['reg_forbidden_ip']='127.0.0.0/8,::1/128';
@@ -285,7 +285,7 @@ $System_Config['telegram_token']='';
 $System_Config['telegram_chatid']='';
 
 #多用户混淆参数后缀
-$System_Config['mu_suffix']='jd.hk';
+$System_Config['mu_suffix']='c7tx.com';
 
 #多用户混淆参数表达式，%5m代表取用户特征 md5 的前五位，%id 代表用户id,%suffix 代表上面这个后缀。
 $System_Config['mu_regex']='%5m%id.%suffix';
@@ -317,7 +317,7 @@ $System_Config['sendgrid_sender'] = '';
 #支付系统
 
 #取值 f2fpay,none,pay91
-$System_Config['payment_system']='pay91';
+$System_Config['payment_system']='none';
 
 #请将base64加密后的支付宝账号复制于下方 http://tool.chinaz.com/Tools/Base64.aspx ，比如你支付宝账号是：mmmxcc，则密文为： bW1teGNj
 #如果使用了CDN或反代，为了防止无法通知到真实的服务器，请在 /public/assets/91pay.php 第289行修改 $codepay_config['notify_url']参数
