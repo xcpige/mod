@@ -200,19 +200,19 @@ $System_Config['email_verify_iplimit']='10';
 
 
 #注册时默认加密方式
-$System_Config['reg_method']='chacha20-ietf';
+$System_Config['reg_method']='aes-256-cfb';
 
 #注册时默认协议
-$System_Config['reg_protocol']='auth_aes128_md5';
+$System_Config['reg_protocol']='origin';
 
 #注册时默认协议参数
 $System_Config['reg_protocol_param']='';
 
 #注册时默认混淆方式
-$System_Config['reg_obfs']='http_simple';
+$System_Config['reg_obfs']='plain';
 
 #注册时默认混淆参数
-$System_Config['reg_obfs_param']='c7tx.com';
+$System_Config['reg_obfs_param']='';
 
 #注册时默认禁止访问IP列表，半角英文逗号分割
 $System_Config['reg_forbidden_ip']='127.0.0.0/8,::1/128';
